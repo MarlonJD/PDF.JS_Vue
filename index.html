@@ -28,7 +28,7 @@
         const urlParams = new URLSearchParams(queryString);
         const base64_string = urlParams.get('base64')
         var base64 = base64_string;
-        const pdf = "\"base64\"";
+        const pdf = "\"'" + base64 + "'\"";
 
         return base64ToArrayBuffer(pdf);
         }
