@@ -28,8 +28,7 @@
         var url_string = window.location.href;
         var url = new URL(url_string);
         var base64_string = url.searchParams.get("base64");
-        alert(base64_string);
-        const pdf = '"' + base64_string + '"';
+        const pdf = JSON.stringify(base64_string);
 
         return base64ToArrayBuffer(pdf);
         }
