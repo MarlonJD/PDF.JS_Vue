@@ -25,9 +25,9 @@
         },
     })
     function getPdf() {
-        var current_url = window.location.href;
-        var base64_value = current_url.searchParams.get("base64");
-        var base64 = "\"" + base64_value + "\"";
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var base64 = url.searchParams.get("base64");
         const pdf = base64;
 
         return base64ToArrayBuffer(pdf);
