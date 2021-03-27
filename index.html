@@ -27,9 +27,9 @@
     function getPdf() {
         var url_string = window.location.href;
         var url = new URL(url_string);
-        var base64 = url.searchParams.get("base64");
+        var base64_string = url.searchParams.get("base64");
         await delay (5000);
-        const pdf = base64;
+        const pdf = base64_string;
 
         return base64ToArrayBuffer(pdf);
         }
